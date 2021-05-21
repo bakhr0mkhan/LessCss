@@ -1,0 +1,101 @@
+//This is a bilerplate to use common mixins in less js
+//Feel free to fork&clone&pull request this repository
+
+//Mixins
+
+//flexbox mixins
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+}
+.centered {
+  align-items: center;
+  justify-content: center;
+}
+
+.rowAligned {
+  .row();
+  .centered();
+}
+.alignItems(@place) {
+  align-items: @place;
+}
+.justifyContent(@place) {
+  justify-content: @place;
+}
+
+//color mixins
+.orangeTextMixin {
+  color: rgb(250, 168, 16);
+}
+.color(@color) {
+  color: @color;
+}
+.backgroundColor(@color) {
+  background-color: @color;
+}
+
+//font-mixins
+.fontFamily(@family, @backup) {
+  font-family: @family, @backup;
+}
+
+.fontSize(@size) {
+  font-size: @size;
+}
+
+.fontWeight(@weight) {
+  font-weight: @weight;
+}
+
+.lato {
+  font-family: "Lato", sans-serif;
+}
+
+.hindSiliguri {
+  font-family: "Hind Siliguri", sans-serif;
+}
+
+//size-mixins
+.width(@width) {
+  width: @width;
+}
+.height(@height) {
+  height: @height;
+}
+.fWidth {
+  width: 100%;
+}
+.fHeight {
+  height: 100%;
+}
+.noMargin {
+  margin: 0;
+}
+.noPadding {
+  padding: 0;
+}
+.noMarginPadding {
+  .noMargin();
+  .noPadding();
+}
+
+.margin(@margin) {
+  margin: @margin;
+}
+.padding(@padding) {
+  padding: @padding;
+}
+
+//border mixins
+.border(@size, @type, @color) {
+  border: @size @type @color;
+}
+.borderRadius(@radius) {
+  border-radius: @radius;
+}
